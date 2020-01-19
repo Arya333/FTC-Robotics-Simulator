@@ -1,0 +1,50 @@
+MatchMaker by Tom and Cathy Saxton
+(founding mentors for FRC Team 1318)
+(c) 2007-2018, Idle Loop Software Design, LLC
+All rights reserved.
+
+Version 1.2.5
+Built on Dec  4 2018 at 13:13:13
+
+usage: MatchMaker [-fgbhqes] [-a 2|3] [-l team_list_file] [-m min_match_sep] [-u n] [-Y year] -t team_count -r round_count
+
+             -t  specify number of teams (required)
+             -r  specify number of rounds (required)
+
+             -h  print this help screen and exit
+             -f  fair quality, shortest compute time (default)
+             -g  good quality
+             -b  best quality, longest compute time
+             -a  specify number of teams per alliance (default is 3)
+             -l  give name of file containing team numbers
+             -m  specify minimum difference in match numbers between
+                   successive matches per team; if not specified,
+                   a default will be chosen by the program
+             -q  no percent complete or total time feedback (quiet)
+             -e  estimate time required to generate specified schedule
+             -s  sparse output, easier for scripts to parse
+             -u  force surrogates into specified round
+             -x  show the range of allowed values for min_match_sep
+             -o  override some requirements to allow for small off-season tournaments
+             -M  mirror blue alliance stations for balancing
+
+examples:
+
+    MatchMaker -t 54 -r 10          schedule for 54 teams, 10 rounds,
+                                      default match separation and quality
+    MatchMaker -t 54 -r 10 -m 6     schedule for 54 teams, 10 rounds,
+                                      min match delta of 6, default quality
+    MatchMaker -g -t 54 -r 10 -m 6  same with 'good' quality, takes longer
+                                      to compute
+    MatchMaker -b -t 54 -r 10 -m 6  same with 'best' quality, time for a latte
+
+    MatchMaker -t 53 -r 7 -u 3      schedule for 53 teams, 7 rounds,
+                                      surrogate matches played in round 3
+
+    MatchMaker ... > matches.txt    instead of printing the schedule to
+                                      the console window, write to a file called
+                                      matches.txt in the current directory
+
+
+For RobSim	MatchMaker -g -a 2 -l teams.txt -u 3 -t 49 -r 5 -s
+

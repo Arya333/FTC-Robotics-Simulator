@@ -3,7 +3,16 @@
 ## About the Project
 
 Match generator and competition simulator for robotics teams. This application reads data from excel files to document the historical scores of FTC teams, which is converted into Team objects. Using these historical scores, a realistic score would be generated based on a normal distribution model. This is done for each match in the match schedule. Then, teams are ranked based on various statistical variables (RP, TBP, High Score, Average Score). Matches are created by using an external program called "Matchmaker". All of this work is done to create one simulation. Multiple simulations can be run and the overall rankings across all the simulations can be analyzed.
-
+<dl>
+  <dt>RP (Ranking Points)</dt>
+  <dd>The points a team gets after a win (2 points) or a loss (0 points). Used to rank teams.</dd>
+  <dt>TBP (Tiebreaking Points)</dt>
+  <dd>The cumulative score of opposing alliances in all matches. A measure of how difficult the opponents the team played were (higher = more difficult). Used to rank teams that are tied in RP.</dd>
+  <dt>High Score</dt>
+  <dd>Highest score of this team among all its matches.</dd>
+  <dt>Average Score</dt>
+  <dd>Average score of all this team's matches.</dd>
+</dl>
 
 ## Installation
 

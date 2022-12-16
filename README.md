@@ -2,6 +2,9 @@
 
 ## About the Project
 
+Match generator and competition simulator for robotics teams. This application reads data from excel files to document the historical scores of FTC teams, which is converted into Team objects. Using these historical scores, a realistic score would be generated based on a normal distribution model. This is done for each match in the match schedule. Then, teams are ranked based on various statistical variables (RP, TBP, High Score, Average Score). Matches are created by using an external program called "Matchmaker". All of this work is done to create one simulation. Multiple simulations can be run and the overall rankings across all the simulations can be analyzed.
+
+
 ## Installation
 
 1. Make sure you have installed <a href="https://www.java.com/en/download/manual.jsp">Java</a> on your system
